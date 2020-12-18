@@ -1,6 +1,10 @@
 const showGrade = (correction) => {
   let grade = 0;
-  if (correction.q1) grade += 15;
+  if (correction.q1) grade += 20;
+  if (correction.q2) grade += 20;
+  if (correction.q3) grade += 20;
+  if (correction.q4) grade += 20;
+  if (correction.q5) grade += 20;
 
   document.querySelector('#resultat').innerHTML = `<h2>Vous avez obtenu ${grade}%</h2>`
 };
@@ -18,7 +22,7 @@ const showErrors = (form, empty) => {
 
 const validate = (data) => {
   const empty = [ ];
-  ["q1"].forEach(q => {
+  ["q1", "q2", "q3", "q4", "q5"].forEach(q => {
     if (! data.get(q)) { empty.push(q); }
   });
   return empty;
@@ -41,4 +45,3 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('form');
   form.addEventListener('submit', onSubmit);
 });
-
