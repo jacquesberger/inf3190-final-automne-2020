@@ -41,7 +41,17 @@ const onSubmit = (e) => {
   }
 };
 
+const showWarning = () => {
+  alert("Il ne reste qu'une minute pour compléter l'examen.");
+};
+
+const disableSubmit = () => {
+  const button = document.querySelector("input[type=submit]").disabled = true;
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('form');
   form.addEventListener('submit', onSubmit);
+  setTimeout(showWarning, 240000); // après 4 minutes
+  setTimeout(disableSubmit, 300000); // après 5 minutes
 });
