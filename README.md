@@ -7,7 +7,7 @@ fournissons le HTML, CSS et PHP du projet. Vous devez fournir le Javascript
 nécessaire afin de remplir toutes les exigences de l'examen.
 
 Comme lors de l'examen intra, votre travail consiste à produire un examen pour
-un cours d'introduction à la programmation web sous forme d'application web.
+un cours d'introduction à la programmation web sous forme d'une application web.
 
 ## Le projet
 
@@ -18,7 +18,7 @@ Le fichier `style.css` contient un peu de CSS pour gérer les quelques élément
 de présentation de l'application.
 
 Le fichier `correction.php` est le code qui effectue la correction de l'examen.
-Ce script retourne un fichier JSON indiquant si chaque question est un succès ou
+Ce script retourne des données en format JSON indiquant si chaque question est un succès ou
 un échec à l'aide d'une valeur booléenne. Une réponse inexistante dans les
 données fournies au script sera considérée comme une réponse erronée.
 
@@ -52,14 +52,6 @@ Lors que l'étudiant clique sur le bouton Corriger, votre application doit
 vérifier si chaque question a été répondu. Si au moins une question n'a pas été
 répondu alors le formulaire ne doit pas être soumis pour la correction et les
 questions non répondues doivent apparaître en rouge.
-
-## Minuterie
-
-L'étudiant possède 5 minutes pour répondre à toutes les questions de l'examen.
-* Après 4 minutes, il faut afficher un message d'avertissement à l'étudiant à
-  l'aide d'un `alert` l'avisant qu'il ne reste qu'une minute pour terminer
-  l'examen.
-* Après 5 minutes, il faut désactiver le bouton Corriger.
 
 ## Consignes
 
